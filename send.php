@@ -11,9 +11,21 @@ require './assets/phpmailer/PHPMailer.php';
 require './assets/phpmailer/SMTP.php';
 
 if (isset($_POST['mail'])) {
-    # code...
+  
 
-//Create an instance; passing `true` enables exceptions
+
+
+
+
+
+
+
+
+
+
+
+
+
 $mail = new PHPMailer(true);
 
 try {
@@ -29,20 +41,20 @@ try {
 
     //Recipients
     $mail->setFrom('from@example.com', 'Mailer');
-    $mail->addAddress('joe@example.net', 'Joe User');     //Add a recipient
+    $mail->addAddress('infoujc19@gmail.com', 'Joe User');     //Add a recipient
     $mail->addAddress('ellen@example.com');               //Name is optional
     $mail->addReplyTo('info@example.com', 'Information');
     $mail->addCC('cc@example.com');
     $mail->addBCC('bcc@example.com');
 
     //Attachments
-    $mail->addAttachment('');         //Add attachments
-    $mail->addAttachment('', '');    //Optional name
+    $mail->addAttachment('./addons/andrew.txt');         //Add attachments
+       //Optional name
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Here is the subject';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    $mail->Subject = $_POST['subject'];
+    $mail->Body    = $_POST['body'];
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();

@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+    font-family:montserrat;
+scroll-behavior: smooth;
+}
+nav{
+    background: #003587  ;
+    height: 80px;
+    width: 100%;
+
+}
+label.logo{
+    color: whitesmoke ;
+    font-size: 35px;
+    line-height :80px;
+    padding: 0 100px;
+    font-weight: 700;
+  
+    
+
+
+
+}
+.checkbox{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+
+}
+#check{
+    display: none;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height :80px; 
+    margin: 0 50px;
+
+
+}
+
+nav ul li a{
+    color: beige;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+  text-transform: uppercase;
+   
+}
+a.active , a:hover{
+    background:#19B4FC  ;
+    transition: .5s ;
+}
+
+
+@media (min-width: 952px) {
+
+    labe.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+
+    }
+}
+
+@media (max-width:858px) {
+
+    .checkbox{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%; 
+        height: 100vh; 
+        background:#2c3e50;
+        top:80px;
+        left: -100%;
+        text-align:center;
+        transition: all 0.5s;
+
+    }
+    nav ul li{
+        display: block;
+        margin: 50px auto;
+        line-height: 30px;
+    }
+
+    nav ul li a{
+        font-size:20px;    
+    
+    }
+    a:hover,a.active{
+     background: none;
+     color: #0082e6;   
+    }
+    #check:checked ~ ul {
+    left: 0;
+    
+}
+
+}
