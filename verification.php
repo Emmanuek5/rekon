@@ -60,7 +60,7 @@ if (isset($msg['error'])) {
 ?><p class="error"><?php  echo $msg['error']; ?></p> </p><?php }?>
     <form  method="POST" class="verify">
         <label>Otp Code</label>
-        <input type="password" name="code" placeholder="Code Here..">
+        <input type="code" name="code" placeholder="Code Here..">
 
 
         <br><input type="submit" name="otp" class="code" value="Enter">

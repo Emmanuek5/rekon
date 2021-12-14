@@ -14,9 +14,6 @@ require './assets/phpmailer/SMTP.php';
 
 include('./connections/config.php');
 
-require './assets/phpmailer/Exception.php';
-require './assets/phpmailer/PHPMailer.php';
-require './assets/phpmailer/SMTP.php';
 
 
 function check_login($con)
@@ -31,14 +28,14 @@ function check_login($con)
 
 		return $user_data;
 	}else{
-		header('location: login.php');
+		header('location: login');
 	}
 }
 
 
 
 
-function mailer($subject,$email,$name,$body)
+function mailer($email,$name,$subject,$body)
 {
 
 
